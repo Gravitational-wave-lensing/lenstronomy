@@ -11,6 +11,7 @@ _SUPPORTED_MODELS = [
     "CNFW_ELLIPSE",
     "CONST_MAG",
     "CONVERGENCE",
+    "TAYLOREXPANSION",
     "coreBURKERT",
     "CORED_DENSITY",
     "CORED_DENSITY_2",
@@ -269,6 +270,10 @@ def lens_class(
         from lenstronomy.LensModel.Profiles.convergence import Convergence
 
         return Convergence()
+    elif lens_type == "TAYLOREXPANSION":
+        from lenstronomy.LensModel.Profiles.taylorexpansion import TaylorExpansion
+
+        return TaylorExpansion()
     elif lens_type == "coreBURKERT":
         from lenstronomy.LensModel.Profiles.coreBurkert import CoreBurkert
 
